@@ -76,7 +76,7 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Custom Components:</h6>
                 <a class="collapse-item" href="/dashboard/product">Product</a>
-                <a class="collapse-item" href="/dashboard/stock">Stock</a>
+                <a class="collapse-item" href="#">Stock</a>
             </div>
         </div>
     </li>
@@ -90,8 +90,8 @@
         <div id="collapseCategory" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Custom Components:</h6>
-                <a class="collapse-item" href="buttons.html">Buttons</a>
-                <a class="collapse-item" href="cards.html">Cards</a>
+                <a class="collapse-item" href="#">Buttons</a>
+                <a class="collapse-item" href="#">Cards</a>
             </div>
         </div>
     </li>
@@ -105,8 +105,8 @@
         <div id="collapseBrands" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Custom Components:</h6>
-                <a class="collapse-item" href="buttons.html">Buttons</a>
-                <a class="collapse-item" href="cards.html">Cards</a>
+                <a class="collapse-item" href="#">Buttons</a>
+                <a class="collapse-item" href="#">Cards</a>
             </div>
         </div>
     </li>
@@ -119,7 +119,7 @@
         </a>
         <div id="collapseSupplier" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="/supplier">Supplier</a>
+                <a class="collapse-item" href="#">Supplier</a>
             </div>
         </div>
     </li>
@@ -136,7 +136,7 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="/utilities">Utilities</a>
+                <a class="collapse-item" href="#">Utilities</a>
             </div>
         </div>
     </li>
@@ -150,7 +150,7 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ url('/dashboard/branch') }}">Branch</a>
+                <a class="collapse-item" href="#">Branch</a>
             </div>
         </div>
     </li>

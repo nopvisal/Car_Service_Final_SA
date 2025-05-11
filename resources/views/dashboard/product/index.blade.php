@@ -56,7 +56,7 @@
                         </td>
                         <td>
                             <!-- Edit Button -->
-                            <a href="{{ route('products.edit', $product->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                            <a href="#" class="btn btn-warning btn-sm">Edit</a>
                             
                             <!-- Delete Button (with confirmation) -->
                             <form action="{{ route('products.destroy', $product->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('Are you sure you want to delete this product?')">
