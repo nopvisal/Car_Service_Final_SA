@@ -33,7 +33,7 @@
                         <a href="/contact" class="">Contact</a>
                     </ul>
                     <div
-                        style="width:120%; height: 5px; background-color: darkgray; margin-top: 20px; opacity:0.5; margin-left:-20px;">
+                        style="width:100%; height: 5px; background-color: darkgray; margin-top: 20px; opacity:0.5; margin-right:-30px;">
                     </div>
                     <div class="h-20 d-inline-flex align-items-center col-12" style="padding-top:20px; padding-left:-30px;">
                        <button class="buttons dis" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="border:none;">
@@ -126,70 +126,77 @@
                     USD
                 </a>
             </div>
-
+            
             <div class="h-100 d-inline-flex align-items-center">
                 <!-- Booking -->
-                <button class="buttons" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="border:none;">
-                    Booking
-                </button>
+                <!-- Booking Button -->
+<button class="buttons" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="border: none;">
+    Booking
+</button>
 
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content" >
-                            <div class="modal-body">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                <div id="booking" class="section">
-                                    <div class="">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="bg-blue h-100 d-flex flex-column justify-content-center text-center p-5 ">
-                                                    <h1 class="text-white mb-4">Book For A Service</h1>
-                                                    <form method="POST" action="{{ route('booking.store') }}">
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body p-0"> <!-- remove padding for full-width style -->
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                
+                <div id="booking" class="section bg-blue text-white">
+                    <div class="container py-5">
+                        <div class="row justify-content-center">
+                            <div class="col-12">
+                                <h1 class="text-white mb-4 text-center">Book For A Service</h1>
+
+                                <form method="POST" action="{{ route('booking.store') }}">
                                     @csrf
                                     <div class="row g-3">
 
-                                    <!-- Customer Phone -->
-                                    <div class="col-12 col-sm-6">
-                                        <input type="text" name="phone" placeholder="Your Phone" required class="form-control border-0" style="height: 55px;">
-                                    </div>
-                                    <!-- Customer Email -->
-                                    <div class="col-12 col-sm-6">
-                                    <input type="email" name="email" placeholder="Your Email" required class="form-control border-0" style="height: 55px;">
-                                    </div>
-                                    <!-- Service Selection -->
-                                    <div class="col-12 col-sm-6">
-                                        <select name="service_id" required class="form-select border-0" style="height: 55px;">
-                                            <option selected>Select A Service</option>
-                                            @foreach($services as $service)
-                                                <option value="{{ $service->id }}">{{ $service->name }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
+                                        <!-- Customer Phone -->
+                                        <div class="col-12 col-sm-6">
+                                            <input type="text" name="phone" placeholder="Your Phone" required class="form-control border-0" style="height: 55px;">
+                                        </div>
 
-                                    <!-- Service Date -->
-                                    <div class="col-12 col-sm-6">
-                                        <input type="date" name="service_date" required class="form-control border-0" style="height: 55px;">
-                                    </div>
-                                    <!-- Special Request -->
-                                    <div class="col-12 ">
-                                        <textarea name="special_request" placeholder="Special Request" class="form-control border-0"></textarea>
-                                    </div>
-                                    <!-- Submit -->
-                                    <div class="col-12 ">
-                                        <button type="submit" class="btn btn-secondary w-100 py-3">Book Now</button>
-                                    </div>
+                                        <!-- Customer Email -->
+                                        <div class="col-12 col-sm-6">
+                                            <input type="email" name="email" placeholder="Your Email" required class="form-control border-0" style="height: 55px;">
+                                        </div>
+
+                                        <!-- Service Selection -->
+                                        <div class="col-12 col-sm-6">
+                                            <select name="service_id" required class="form-select border-0" style="height: 55px;">
+                                                <option selected disabled>Select A Service</option>
+                                                @foreach($services as $service)
+                                                    <option value="{{ $service->id }}">{{ $service->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+
+                                        <!-- Service Date -->
+                                        <div class="col-12 col-sm-6">
+                                            <input type="date" name="service_date" required class="form-control border-0" style="height: 55px;">
+                                        </div>
+
+                                        <!-- Special Request -->
+                                        <div class="col-12">
+                                            <textarea name="special_request" placeholder="Special Request" class="form-control border-0"></textarea>
+                                        </div>
+
+                                        <!-- Submit -->
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-secondary w-100 py-3">Book Now</button>
+                                        </div>
+
                                     </div>
                                 </form>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> <!-- end #booking -->
+            </div> <!-- end .modal-body -->
+        </div> <!-- end .modal-content -->
+    </div> <!-- end .modal-dialog -->
+</div> <!-- end .modal -->
+
 
                 
                 @auth('customer')
@@ -212,4 +219,7 @@
         </div>
     </div>
 </div>
+
+
+
 <!-- Topbar End -->
